@@ -1,0 +1,13 @@
+@import "config";
+@import "navbar";
+@import "pages";
+body {
+	background-color: $magnolia;
+	#root {
+		display: flex;
+		flex-direction: column;
+		@include media-lg {
+			flex-direction: row;
+		}
+	}
+}

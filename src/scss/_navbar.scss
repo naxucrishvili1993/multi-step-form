@@ -1,0 +1,70 @@
+nav {
+	background: url(../images/bg-sidebar-mobile.svg);
+	background-repeat: no-repeat;
+	background-size: 122vw;
+	padding: 5rem;
+	.desktop-navbar {
+		display: none;
+	}
+	ul {
+		align-items: center;
+		display: flex;
+		justify-content: space-around;
+		list-style-type: none;
+		margin: auto;
+		max-width: 400px;
+		li {
+			button {
+				background: none;
+				border: 2px solid $light-gray;
+				border-radius: 100%;
+				color: $light-gray;
+				font-size: $p-size;
+				font-weight: 700;
+				padding: 0.5rem 0.8rem;
+
+				@include transition-ease;
+			}
+
+			.active {
+				button {
+					background-color: $light-gray;
+					color: $marine-blue;
+				}
+			}
+		}
+	}
+
+	@include media-lg {
+		background-image: url(../images/bg-sidebar-desktop.svg);
+		background-position: left;
+		background-size: 50vh;
+		height: 100vh;
+		.mobile-navbar {
+			display: none;
+		}
+		.desktop-navbar {
+			align-items: start;
+			display: flex;
+			flex-direction: column;
+			gap: 1rem;
+			width: 40vw;
+			li a {
+				display: flex;
+				gap: 20px;
+				text-decoration: none;
+				div:nth-of-type(2) {
+					display: flex;
+					flex-direction: column;
+					p:nth-of-type(1) {
+						color: $pastel-blue;
+					}
+					p:nth-of-type(2) {
+						color: $white;
+						font-weight: 700;
+					}
+				}
+			}
+		}
+	}
+}

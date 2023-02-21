@@ -1,0 +1,357 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap");
+* {
+  box-sizing: border-box;
+  font-family: "Ubuntu", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  background: url(../images/bg-sidebar-mobile.svg);
+  background-repeat: no-repeat;
+  background-size: 122vw;
+  padding: 5rem;
+}
+nav .desktop-navbar {
+  display: none;
+}
+nav ul {
+  align-items: center;
+  display: flex;
+  justify-content: space-around;
+  list-style-type: none;
+  margin: auto;
+  max-width: 400px;
+}
+nav ul li button {
+  background: none;
+  border: 2px solid hsl(229deg, 24%, 87%);
+  border-radius: 100%;
+  color: hsl(229deg, 24%, 87%);
+  font-size: 16px;
+  font-weight: 700;
+  padding: 0.5rem 0.8rem;
+  transition: all 0.3s ease-in-out;
+}
+nav ul li .active button {
+  background-color: hsl(229deg, 24%, 87%);
+  color: hsl(213deg, 96%, 18%);
+}
+@media only screen and (min-width: 1200px) {
+  nav {
+    background-image: url(../images/bg-sidebar-desktop.svg);
+    background-position: left;
+    background-size: 50vh;
+    height: 100vh;
+  }
+  nav .mobile-navbar {
+    display: none;
+  }
+  nav .desktop-navbar {
+    align-items: start;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 40vw;
+  }
+  nav .desktop-navbar li a {
+    display: flex;
+    gap: 20px;
+    text-decoration: none;
+  }
+  nav .desktop-navbar li a div:nth-of-type(2) {
+    display: flex;
+    flex-direction: column;
+  }
+  nav .desktop-navbar li a div:nth-of-type(2) p:nth-of-type(1) {
+    color: hsl(228deg, 100%, 84%);
+  }
+  nav .desktop-navbar li a div:nth-of-type(2) p:nth-of-type(2) {
+    color: hsl(0deg, 0%, 100%);
+    font-weight: 700;
+  }
+}
+
+body .page-div {
+  background-color: hsl(0deg, 0%, 100%);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  margin: -1.5rem 1rem;
+  padding: 1.5rem;
+}
+@media only screen and (min-width: 660px) {
+  body .page-div {
+    margin: -1.5rem auto;
+    max-width: 500px;
+  }
+}
+body .page-div h1 {
+  color: hsl(213deg, 96%, 18%);
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+body .page-div .header-p,
+body .page-div input {
+  margin-bottom: 1rem;
+}
+body .page-div .header-p {
+  color: hsl(231deg, 11%, 63%);
+  font-size: 16px;
+  width: 80%;
+}
+body .page-div label p {
+  color: hsl(213deg, 96%, 18%);
+  font-size: 15px;
+  font-weight: bold;
+  margin-bottom: 0.4rem;
+}
+body .page-div label input {
+  border: 1px solid hsl(231deg, 11%, 63%);
+  border-radius: 3px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  height: 2.5rem;
+  outline: none;
+  text-indent: 0.7rem;
+  width: 100%;
+}
+body .page-div .radio-div {
+  display: flex;
+  align-items: center;
+  transition: all 0.15s;
+}
+body .page-div .radio-div .toggle {
+  background-color: hsl(213deg, 96%, 18%);
+  border-radius: 20px;
+  border: none !important;
+  display: inline-block;
+  height: 20px;
+  margin: 0 1rem;
+  position: relative;
+  width: 40px;
+}
+body .page-div .radio-div .toggle::before {
+  background-color: hsl(0deg, 0%, 100%);
+  border-radius: 100%;
+  content: "";
+  height: 15px;
+  left: 3px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 15px;
+  transition: all 0.3s ease-in-out;
+}
+body .page-div .radio-div .active::before {
+  left: 20px;
+}
+body .page-div-cards {
+  display: flex;
+  flex-direction: column;
+}
+body .page-div-cards .cards-card {
+  border: 2px solid hsl(0deg, 0%, 100%);
+  border-radius: 10px;
+  cursor: pointer;
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 0.6rem;
+  padding: 0.8rem;
+  transition: all 0.3s ease-in-out;
+}
+body .page-div-cards .cards-card:hover {
+  background-color: hsl(217deg, 100%, 97%);
+}
+body .page-div-cards .cards-card h3 {
+  font-size: 1rem;
+}
+body .page-div-cards .cards-card p,
+body .page-div-cards .cards-card span {
+  font-size: 14px;
+}
+body .page-div-cards .cards-card p {
+  color: hsl(231deg, 11%, 63%);
+}
+body .page-div-cards .cards-card h3,
+body .page-div-cards .cards-card span {
+  color: hsl(213deg, 96%, 18%);
+}
+body .page-div-cards .active {
+  border: 2px solid hsl(243deg, 100%, 62%) !important;
+}
+body .page-div .fourth-page-div {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+body .page-div .fourth-page-div-price-p {
+  color: hsl(213deg, 96%, 18%);
+}
+body .page-div .fourth-page-div:not(.fourth-page-div-price-p) {
+  color: hsl(231deg, 11%, 63%);
+}
+body .page-div .fourth-page-div:nth-of-type(1) {
+  color: hsl(213deg, 96%, 18%);
+  font-weight: bold;
+  padding-bottom: 0.8rem;
+  border-bottom: 1px solid hsl(229deg, 24%, 87%);
+}
+body .page-div .fourth-page-div:last-child {
+  margin-top: 2rem;
+}
+body .page-div .fourth-page-div:last-child .total-price {
+  color: hsl(243deg, 100%, 62%);
+  font-weight: 700;
+}
+body-thank-you-icon {
+  margin-bottom: 1rem;
+  width: 70px;
+}
+body .thank-you-page {
+  text-align: center;
+}
+body .thank-you-page p {
+  margin: auto;
+  margin-top: 1rem;
+}
+body .thank-you-page a {
+  color: hsl(0deg, 0%, 100%);
+  letter-spacing: 1px;
+  text-decoration: none;
+}
+body .thank-you-page a button {
+  background-color: hsl(213deg, 96%, 18%);
+  border: none;
+  border-radius: 8px;
+  color: hsl(0deg, 0%, 100%);
+  cursor: pointer;
+  font-weight: 700;
+  margin-top: 1rem;
+  padding: 1rem;
+  transition: all 0.3s ease-in-out;
+}
+body .thank-you-page a:hover {
+  opacity: 0.8;
+}
+body .link-btn-wrapper {
+  background-color: hsl(0deg, 0%, 100%);
+  bottom: 0;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  padding: 1rem;
+  position: absolute;
+  right: 0;
+  text-align: right;
+  width: 100%;
+}
+body .link-btn-wrapper a {
+  color: hsl(0deg, 0%, 100%);
+  max-width: 100px;
+  text-decoration: none;
+  width: 100%;
+}
+body .link-btn-wrapper a:nth-of-type(1) {
+  text-align: left;
+}
+body .link-btn-wrapper button {
+  background-color: hsl(213deg, 96%, 18%);
+  border: 0;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  font-weight: 700;
+  padding: 0.8rem 1rem;
+}
+body .link-btn-wrapper button:disabled {
+  opacity: 0.5;
+}
+body .second-page {
+  display: flex;
+  justify-content: space-between;
+}
+body .second-page .confirm-btn {
+  transition: all 0.3s ease-in-out;
+}
+body .second-page .confirm-btn:hover {
+  background-color: hsl(243deg, 100%, 62%);
+}
+body .third-page .cards-card {
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+body .third-page .cards-card div:nth-of-type(1) {
+  margin-top: 15px;
+  margin-right: 15px;
+}
+body .third-page .cards-card div:nth-of-type(1) input[type=checkbox] {
+  width: 1.1rem;
+  height: 1.1rem;
+}
+body .third-page .cards-card div:nth-of-type(2) {
+  margin-right: auto;
+}
+body .third-page .cards-card div:nth-of-type(3) span {
+  color: hsl(243deg, 100%, 62%);
+}
+@media only screen and (min-width: 1200px) {
+  body {
+    gap: 0;
+  }
+  body nav {
+    padding-right: 0;
+  }
+  body .page-div {
+    background-color: hsl(217deg, 100%, 97%);
+    box-shadow: none;
+    margin: auto;
+    width: 60vw;
+    margin-top: 5rem;
+    margin-left: 5rem;
+  }
+  body .page-div-cards {
+    -moz-column-gap: 1rem;
+         column-gap: 1rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    row-gap: 2rem;
+  }
+  body .page-div-cards .cards-card {
+    aspect-ratio: 1.5/1;
+    border-color: hsl(217deg, 100%, 97%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 200px;
+  }
+  body .page-div .third-page {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 0.5rem;
+    margin-top: 2rem;
+  }
+  body .page-div .third-page .cards-card {
+    display: flex;
+    flex-direction: row;
+    max-height: 2.5rem;
+    width: 100%;
+  }
+  body .link-btn-wrapper {
+    background: none;
+    box-shadow: none;
+    width: 68vw;
+  }
+}
+
+body {
+  background-color: hsl(217deg, 100%, 97%);
+}
+body #root {
+  display: flex;
+  flex-direction: column;
+}
+@media only screen and (min-width: 1200px) {
+  body #root {
+    flex-direction: row;
+  }
+}/*# sourceMappingURL=main.css.map */
