@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { NavLink, Route, Routes } from "react-router-dom";
 import FirstPage from "./pages/FirstPage";
 import SecondPage from "./pages/SecondPage";
@@ -40,7 +41,6 @@ const App = () => {
 	};
 	// გამოითვლება ფასი აქტიური გეგმისა და წლიური/თვიური გადახდის არჩევისას.
 	useEffect(calcCardPrice, [activeCard, monthlyActive]);
-	//
 	useEffect(() => {
 		calcCardPrice();
 		calculateAddOnsPrice();

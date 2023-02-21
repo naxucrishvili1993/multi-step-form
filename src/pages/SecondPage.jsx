@@ -19,8 +19,8 @@ const SecondPage = (props) => {
 	return (
 		<>
 			<div className="page-div">
-				<h1>Select your plan</h1>
-				<p className="header-p">
+				<h1 className="page-div-heading-second-page">Select your plan</h1>
+				<p className="header-p header-p-second-page">
 					You have the option of monthly or yearly billing
 				</p>
 				<div className="page-div-cards page-div-second-page">
@@ -64,11 +64,11 @@ const SecondPage = (props) => {
 						</div>
 					</div>
 					<div className="radio-div">
-						Monthly{" "}
+						<p>Monthly</p>{" "}
 						<div
 							className={props.monthlyActive ? "toggle" : "toggle active"}
 							onClick={handleClick}></div>{" "}
-						Yearly
+						<p>Yearly</p>
 					</div>
 				</div>
 			</div>

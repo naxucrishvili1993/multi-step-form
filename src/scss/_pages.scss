@@ -17,6 +17,20 @@ body {
 			font-size: 1.8rem;
 			margin-bottom: 0.5rem;
 		}
+		&-heading-second-page {
+			font-size: 1.4rem !important;
+		}
+		.header-p-second-page {
+			font-size: 0.9rem !important;
+		}
+		@include media-sm-md {
+			&-heading-second-page {
+				font-size: 1.8rem !important;
+			}
+			.header-p-second-page {
+				font-size: 1rem !important;
+			}
+		}
 
 		.header-p,
 		input {
@@ -52,6 +66,14 @@ body {
 			display: flex;
 			align-items: center;
 			transition: all 0.15s;
+			p {
+				font-size: 14px;
+			}
+			@include media-sm-md {
+				p {
+					font-size: 1rem;
+				}
+			}
 
 			.toggle {
 				background-color: $marine-blue;
@@ -92,18 +114,30 @@ body {
 				cursor: pointer;
 				display: flex;
 				gap: 1rem;
-				margin-bottom: 0.6rem;
+				margin-bottom: 0.3rem;
 				padding: 0.8rem;
 				@include transition-ease;
 				&:hover {
 					background-color: $magnolia;
 				}
 				h3 {
-					font-size: 1rem;
+					font-size: 0.9rem;
 				}
 				p,
 				span {
-					font-size: 14px;
+					font-size: 13px;
+				}
+				@include media-sm-md {
+					& {
+						margin-bottom: 0.6rem;
+					}
+					h3 {
+						font-size: 1rem;
+					}
+					p,
+					span {
+						font-size: 14px;
+					}
 				}
 				p {
 					color: $cool-gray;

@@ -90,6 +90,20 @@ body .page-div h1 {
   font-size: 1.8rem;
   margin-bottom: 0.5rem;
 }
+body .page-div-heading-second-page {
+  font-size: 1.4rem !important;
+}
+body .page-div .header-p-second-page {
+  font-size: 0.9rem !important;
+}
+@media only screen and (min-width: 660px) {
+  body .page-div-heading-second-page {
+    font-size: 1.8rem !important;
+  }
+  body .page-div .header-p-second-page {
+    font-size: 1rem !important;
+  }
+}
 body .page-div .header-p,
 body .page-div input {
   margin-bottom: 1rem;
@@ -118,6 +132,14 @@ body .page-div .radio-div {
   display: flex;
   align-items: center;
   transition: all 0.15s;
+}
+body .page-div .radio-div p {
+  font-size: 14px;
+}
+@media only screen and (min-width: 660px) {
+  body .page-div .radio-div p {
+    font-size: 1rem;
+  }
 }
 body .page-div .radio-div .toggle {
   background-color: hsl(213deg, 96%, 18%);
@@ -154,7 +176,7 @@ body .page-div-cards .cards-card {
   cursor: pointer;
   display: flex;
   gap: 1rem;
-  margin-bottom: 0.6rem;
+  margin-bottom: 0.3rem;
   padding: 0.8rem;
   transition: all 0.3s ease-in-out;
 }
@@ -162,11 +184,23 @@ body .page-div-cards .cards-card:hover {
   background-color: hsl(217deg, 100%, 97%);
 }
 body .page-div-cards .cards-card h3 {
-  font-size: 1rem;
+  font-size: 0.9rem;
 }
 body .page-div-cards .cards-card p,
 body .page-div-cards .cards-card span {
-  font-size: 14px;
+  font-size: 13px;
+}
+@media only screen and (min-width: 660px) {
+  body .page-div-cards .cards-card {
+    margin-bottom: 0.6rem;
+  }
+  body .page-div-cards .cards-card h3 {
+    font-size: 1rem;
+  }
+  body .page-div-cards .cards-card p,
+  body .page-div-cards .cards-card span {
+    font-size: 14px;
+  }
 }
 body .page-div-cards .cards-card p {
   color: hsl(231deg, 11%, 63%);
