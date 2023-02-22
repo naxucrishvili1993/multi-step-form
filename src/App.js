@@ -27,7 +27,6 @@ const App = () => {
 			(monthlyActive ? (priceRef.current = 12) : (priceRef.current = 120));
 		activeCard === "3" &&
 			(monthlyActive ? (priceRef.current = 15) : (priceRef.current = 150));
-		setPrice(priceRef.current);
 	};
 	const calculateAddOnsPrice = () => {
 		calcCardPrice();
@@ -37,10 +36,10 @@ const App = () => {
 			(monthlyActive ? (priceRef.current += 2) : (priceRef.current += 20));
 		addOns[2] &&
 			(monthlyActive ? (priceRef.current += 2) : (priceRef.current += 20));
-		setPrice(priceRef.current);
 	};
-	// გამოითვლება ფასი აქტიური გეგმისა და წლიური/თვიური გადახდის არჩევისას.
+	// გამოითვლება ფასი აქტიური გეგმისა და წლიური/თვიური გადახდის არჩევისას (Calculated price when selecting active plan and annual/monthly payment)
 	useEffect(calcCardPrice, [activeCard, monthlyActive]);
+	// ყოველ ჯერზე, როდესაც "დანამატები" შეიცვლება, გამოითვლება განახლებული ფასი (Each time the "add-ons" are changed, an updated price will be calculated)
 	useEffect(() => {
 		calcCardPrice();
 		calculateAddOnsPrice();
@@ -127,6 +126,7 @@ const App = () => {
 							handleClick={() => setMonthlyActive(!monthlyActive)}
 							monthlyActive={monthlyActive}
 							handleActiveCard={handleActiveCard}
+							handleSubmit={() => setPrice(priceRef.current)}
 						/>
 					}
 				/>
@@ -136,6 +136,7 @@ const App = () => {
 						<ThirdPage
 							monthlyActive={monthlyActive}
 							handleAddOns={handleAddOns}
+							handleSubmit={() => setPrice(priceRef.current)}
 						/>
 					}
 				/>

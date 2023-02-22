@@ -76,18 +76,19 @@ body .page-div {
   background-color: hsl(0deg, 0%, 100%);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   border-radius: 10px;
-  margin: -1.5rem 1rem;
-  padding: 1.5rem;
+  margin: -10% 1rem;
+  padding: 1.2rem;
 }
 @media only screen and (min-width: 660px) {
   body .page-div {
     margin: -1.5rem auto;
     max-width: 500px;
+    padding: 1.5rem;
   }
 }
 body .page-div h1 {
   color: hsl(213deg, 96%, 18%);
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   margin-bottom: 0.5rem;
 }
 body .page-div-heading-second-page {
@@ -110,14 +111,27 @@ body .page-div input {
 }
 body .page-div .header-p {
   color: hsl(231deg, 11%, 63%);
-  font-size: 16px;
+  font-size: 0.9rem;
   width: 80%;
+}
+@media only screen and (min-width: 660px) {
+  body .page-div h1 {
+    font-size: 1.8rem;
+  }
+  body .page-div .header-p {
+    font-size: 16px;
+  }
 }
 body .page-div label p {
   color: hsl(213deg, 96%, 18%);
-  font-size: 15px;
+  font-size: 13px;
   font-weight: bold;
   margin-bottom: 0.4rem;
+}
+@media only screen and (min-width: 660px) {
+  body .page-div label p {
+    font-size: 14px;
+  }
 }
 body .page-div label input {
   border: 1px solid hsl(231deg, 11%, 63%);
@@ -270,7 +284,7 @@ body .link-btn-wrapper {
   background-color: hsl(0deg, 0%, 100%);
   bottom: 0;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-  padding: 1rem;
+  padding: 0.5rem;
   position: absolute;
   right: 0;
   text-align: right;
@@ -278,7 +292,7 @@ body .link-btn-wrapper {
 }
 body .link-btn-wrapper a {
   color: hsl(0deg, 0%, 100%);
-  max-width: 100px;
+  max-width: 120px;
   text-decoration: none;
   width: 100%;
 }

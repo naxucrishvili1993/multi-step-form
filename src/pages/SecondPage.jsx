@@ -77,7 +77,7 @@ const SecondPage = (props) => {
 					<button>Go Back</button>
 				</Link>
 				<Link to="/third">
-					<button>Next Step</button>
+					<button onClick={props.handleSubmit}>Next Step</button>
 				</Link>
 			</div>
 		</>
